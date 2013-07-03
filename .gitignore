@@ -1,3 +1,6 @@
+# Python stuff
+*.pyc
+
 # SCM stuff
 .git/
 

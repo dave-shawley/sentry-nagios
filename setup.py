@@ -9,7 +9,7 @@ def read_requirements(req_file):
         f = open(req_file)
         for line in f:
             if '#' in line:
-                line = line[0 : line.find('#')]
+                line = line[0: line.find('#')]
             line = line.strip()
             if line:
                 reqs.append(line)
@@ -53,6 +53,10 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-    ]
+    ],
+    entry_points={
+        'sentry.apps': [
+            'pluginname = sentry_nagios',
+        ],
+    },
 )
-
