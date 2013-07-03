@@ -33,15 +33,15 @@ f.close()
 
 # let setuptools.setup do the real work
 setup(
-    name='Setup-Example',
+    name='Sentry-Nagios',
     version='1',
     license='BSD',
     author='Dave Shawley',
     author_email='daveshawley@gmail.com',
-    url='http://github.com/dave-shawley/setup-example/',
-    description='Simple example of using Python toolchain',
+    url='http://github.com/dave-shawley/sentry-nagios/',
+    description='Sentry plug-in to transmit alerts to Nagios.',
     long_description=readme,
-    py_modules=['replace_me'],
+    py_modules=['sentry_nagios'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

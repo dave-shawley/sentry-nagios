@@ -1,0 +1,14 @@
+# SCM stuff
+.git/
+
+# test output
+nosetests.xml
+.coverage
+.tox
+
+# bundling stuff
+*.egg
+*.egg-info
+build/
+dist/
+env/
