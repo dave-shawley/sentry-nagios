@@ -1,7 +1,10 @@
+from sentry.plugins import Plugin
+
+
 VERSION = '1'
 
 
-class SentryNagios:
+class SentryNagios(Plugin):
     title = 'Sentry Nagios'
     slug = 'nagios'
     description = 'Alert: sent to Nagios'

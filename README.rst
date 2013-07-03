@@ -1,11 +1,15 @@
-Sample Python Project
-=====================
+Nagios Plug-in for Sentry
+=========================
 
-This repository is a very simple Python application skeleton.  I do not start
-new projects by cloning this or anything.  It is just a really useful thing
-to point new Python developers at.  It shows how to use a handful of *best
-practices* techniques and tools.  First we need to discuss two very important
-utilities that are absolutely required if you are doing any Python development.
+This is a `Sentry`_ plugin that injects events into `Nagios`_.
+
+Development Setup
+=================
+
+This repository attempts to use a handful of Python *best practices*,
+techniques, and tools.  First we need to discuss two very important
+utilities that are absolutely required if you are doing any Python
+development.
 
 setuptools
 ----------
@@ -32,16 +36,6 @@ running::
     prompt$ virtualenv --no-site-packages --quiet env
     prompt$ source env/bin/activate
     (env)prompt$ pip --quiet install -r tools.txt
-    (env)prompt$ ls -CF env/bin/hg env/bin/nosetests
-    env/bin/hg*                 env/bin/nosetests*
-
-Files
-=====
-
-Now that we have that out of the way, let's talk through the various files.
-There are only a handful of them that really matter.  The python files in
-the *replace_me* and *tests* directories are pretty worthless but they are
-required to make the whole package work.
 
 *setup.py*
 ----------
@@ -72,9 +66,7 @@ packages that I really cannot develop code without these days.
 -----------
 
 Yet another `pip requirements file`_ that contains my basic SCM environment.
-I use `mercurial`_ for my day-to-day source control, `hg_git`_ to integrate
-against github.com, and `setuptools_hg`_ to integrate setup tools and my
-source control.
+I use `setuptools_git`_ to integrate setup tools and my source control.
 
 *setup.cfg*
 -----------
@@ -85,6 +77,8 @@ a *setup.cfg* file for configuration settings.  This is a standard INI style
 file that contains separate sections for each of the utilities that use it.
 
 
+.. _Sentry: http://getsentry.com/
+.. _Nagios: http://www.nagios.org/
 .. _pypi entry: https://pypi.python.org/pypi/setuptools
 .. _virtualenv: http://www.virtualenv.org/
 .. _setuptools: https://pypi.python.org/pypi/setuptools
@@ -92,7 +86,4 @@ file that contains separate sections for each of the utilities that use it.
 .. _nose: https://nose.readthedocs.org/en/latest/usage.html#configuration
 .. _pytest: http://pytest.org/latest/customize.html
 .. _flake8: http://flake8.readthedocs.org/en/latest/config.html
-.. _mercurial: http://mercurial.selenic.com
-.. _hg_git: http://hg-git.github.io
-.. _setuptools_hg: https://pypi.python.org/pypi/setuptools_hg
-
+.. _setuptools_git: https://pypi.python.org/pypi/setuptools-git

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 
 def read_requirements(req_file):
@@ -41,7 +41,7 @@ setup(
     url='http://github.com/dave-shawley/sentry-nagios/',
     description='Sentry plug-in to transmit alerts to Nagios.',
     long_description=readme,
-    py_modules=['sentry_nagios'],
+    packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
     platforms='any',

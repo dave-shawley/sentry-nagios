@@ -1,7 +1,9 @@
 import unittest
 
 from hamcrest import assert_that, equal_to
+import sentry.plugins
 
+from tests.matchers import subclass_of
 import sentry_nagios
 
 
@@ -33,3 +35,7 @@ class SentryPluginRequirementsTest(unittest.TestCase):
     def test_that_plugin_has_author_url(self):
         assert_that(sentry_nagios.SentryNagios.author_url,
                     equal_to('https://github.com/dave-shawley/sentry_nagios'))
+
+    def test_that_plugin_implements_required_interface(self):
+        assert_that(sentry_nagios.SentryNagios,
+                    subclass_of(sentry.plugins.Plugin))
